@@ -56,7 +56,7 @@ def query(sql_path: str) ->None:
         cursor.execute(sql)
         print(f"Queried {sql_path}")
         result = cursor.fetchall()
-        print(result)
+        # print(result)
         # Always close when done
         cursor.close()
         conn.close()
