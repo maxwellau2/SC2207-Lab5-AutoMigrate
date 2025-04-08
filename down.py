@@ -1,6 +1,5 @@
 # disclaimer, i just took this from chat
 
-#!/usr/bin/env python3
 import sys
 import pyodbc
 from util import get_connection
@@ -22,7 +21,7 @@ def drop_all_tables():
 
     EXEC sp_executesql @sql;
     """
-    print("⏳ Dropping all foreign‑key constraints…")
+    print("⏳ Dropping all foreign-key constraints…")
     cursor.execute(fk_sql)
 
     # 2) Drop every user table
@@ -40,10 +39,10 @@ def drop_all_tables():
 
     EXEC sp_executesql @sql;
     """
-    print("⏳ Dropping all user tables…")
+    print("Dropping all user tables…")
     cursor.execute(drop_sql)
 
-    print("✅ All user tables (and their FKs) have been dropped.")
+    print("All user tables (and their FKs) have been dropped.")
     cursor.close()
     conn.close()
 

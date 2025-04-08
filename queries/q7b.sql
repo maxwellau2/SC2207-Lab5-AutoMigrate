@@ -16,6 +16,7 @@ WITH Profits2024 AS (
         '2024-01-01'
       ) BETWEEN 20 AND 29
 )
+
 SELECT
     CASE WHEN Gender = 1 THEN 'Male' ELSE 'Female' END AS Gender,
     COUNT(*)                AS NumPortfolios,
