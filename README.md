@@ -19,20 +19,40 @@ venv/scripts/activate # for windows users
 pip install -r requirements.txt
 ```
 
-4. create the sql file in the /sql tab, say for example "foo.sql"
+4. Run tips
 
-5. Change the line in up.py
-
-```
-create_table("sql/00-investor.sql")
-```
-
-into
+-   To remove all tables
 
 ```
-create_table("sql/foo.sql")
+python down.py
 ```
 
-this is for testing. in reality, we will do 1 whole for loop for all files in the /sql directory
+-   To create all tables
 
-okthxbye
+```
+python up.py
+```
+
+-   To seed the tables
+
+```
+python seed.py
+```
+
+-   To run the sequence (down,up,seed), ensure you have MAKE
+
+```
+sudo apt install make
+```
+
+-   Then you can run the macro that does (down,up,seed) for you
+
+```
+make run-all
+```
+
+-   To run queries (it will run all the queries in the queries folder in ascending order)
+
+```
+python query.py
+```
