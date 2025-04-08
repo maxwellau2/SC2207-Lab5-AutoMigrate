@@ -1,6 +1,6 @@
 # Setup instructions
 
-1. Follow this guide on setting up ODBC17
+1. Follow this guide on setting up ODBC17. Pls note we only noticed success in using it in WSL2 (ubutnu 22.04)
 
     https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver16&tabs=ubuntu18-install%2Calpine17-install%2Cubuntu16-install%2Credhat7-13-install%2Crhel7-offline#17
 
