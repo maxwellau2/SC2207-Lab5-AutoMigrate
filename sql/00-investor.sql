@@ -1,4 +1,3 @@
-
 IF OBJECT_ID(N'dbo.Investor', 'U') IS NULL -- add this to every query to prevent dupes
     BEGIN
         CREATE TABLE Investor (
