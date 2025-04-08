@@ -1,7 +1,7 @@
 from util import seed
 
 files = [
-    # 'seed/01-investor.sql',
+    'seed/01-investor.sql',
     'seed/02-financialgoal.sql',
     # 'seed/03-risk_tolerance.sql',
     # 'seed/04-portfolio.sql',
