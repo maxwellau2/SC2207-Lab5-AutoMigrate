@@ -7,7 +7,7 @@
 2. create the environment
 
 ```
-python3 -m venv vnev
+python3 -m venv venv
 ```
 
 3. install requirments
