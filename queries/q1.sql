@@ -1,3 +1,5 @@
+-- Q1. Find investors who are making on average a loss across all their portfolios in 2024.
+
 -- -- Query: Investors with an average loss across portfolios in 2024
 -- SELECT 
 --     i.InvestorID,
@@ -33,4 +35,4 @@ group by investor.investorid, portfolio.pid, investor.name
 )
 
 SELECT * from investorportfolio2024
---WHERE pnl2024 < 0;
+WHERE pnl2024 < 0;

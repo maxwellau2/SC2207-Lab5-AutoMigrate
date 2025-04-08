@@ -8,3 +8,4 @@ WHERE PerformanceDate
           AND DATEDIFF(SECOND, '1970-01-01', '2025-01-01') - 1
 GROUP BY FORMAT(DATEADD(SECOND, PerformanceDate, '1970-01-01'), 'yyyy-MM')
 ORDER BY [YearMonth];
+

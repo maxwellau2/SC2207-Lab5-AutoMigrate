@@ -18,5 +18,7 @@ WITH TopUps2024 AS (
     GROUP BY InvestorID, PID
     HAVING COUNT(DISTINCT DATEPART(MONTH, TxnDate)) = 12
 )
-SELECT DISTINCT InvestorID
-FROM ConsistentTopUps;
+SELECT DISTINCT Investor.InvestorID, Investor.Name
+FROM ConsistentTopUps
+JOIN Investor
+ON Investor.InvestorID = ConsistentTopUps.InvestorID;
