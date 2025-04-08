@@ -1,4 +1,4 @@
-IF OBJECT_ID(N'dbo.StockInPortfolio', 'U') IS NULL
+IF OBJECT_ID(N'dbo.Stock_In_Portfolio', 'U') IS NULL
     BEGIN
         CREATE TABLE Stock_In_Portfolio (
             PID             INT             NOT NULL,

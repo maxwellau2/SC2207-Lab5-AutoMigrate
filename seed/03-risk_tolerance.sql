@@ -3,4 +3,5 @@ INSERT INTO dbo.Risk_Tolerance (InvestorID, RiskLevel, Q1answer, Q2answer, Q3ans
     (2, 'Aggressive', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes'),
     (3, 'Aggressive', 'No', 'Yes', 'Yes', 'Yes', 'No'),
     (4, 'Aggressive', 'Yes', 'No', 'Yes', 'Yes', 'Yes'),
-    (5, 'Conservative', 'No', 'No', 'No', 'Yes', 'No');
+    (5, 'Conservative', 'No', 'No', 'No', 'Yes', 'No'),
+    (6, 'Aggressive', 'No', 'No', 'No', 'Yes', 'No');
