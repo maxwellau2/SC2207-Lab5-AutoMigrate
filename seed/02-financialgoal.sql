@@ -2,14 +2,14 @@ IF OBJECT_ID(N'dbo.Financial_Goal', 'U') IS NOT NULL
 BEGIN
     INSERT INTO dbo.Financial_Goal (InvestorID, Goal, Amount, Timeline, StartDate)
     VALUES
-        (1, 'Become king of pirates',              500000, 5, 1672531200),   -- 2028 − 2023 = 5 years
+        (1, 'Residential property purchase',              500000, 5, 1672531200),   -- 2028 − 2023 = 5 years
         (1, 'Retirement',             800000, 22, 1672531200),  -- 2045 − 2023 = 22 years
         (4, 'Vacation',                15000, 2, 1672531200),   -- 2025 − 2023 = 2 years
-        (5, 'Become king of pirates', 600000, 12, 1672531200),  -- 2035 − 2023 = 12 years
+        (5, 'Residential property purchase', 600000, 12, 1672531200),  -- 2035 − 2023 = 12 years
         (6, 'Become king of pirates', 900000, 12, 1672531200),  -- 2035 − 2023 = 12 years
         ( 2, 'Car Purchase',            80000,    3, 1704045600),   -- Ben Lim (Shopee) 2024 Jan
         ( 2, 'Vacation',                15000,    2, 1704047600),
-        ( 2, 'Become king of pirates', 200000,    8, 1704048600),
+        ( 2, 'Residential property purchase', 200000,    8, 1704048600),
 
         ( 3, 'Education Fund',         100000,    7, 1714500000),   -- Cynthia Ong (Grab)
         ( 3, 'Become king of pirates',             800000,   22, 1714520000),
