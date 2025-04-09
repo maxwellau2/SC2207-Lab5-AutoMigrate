@@ -15,10 +15,10 @@ WITH RankedGoals AS(
 	FROM Financial_Goal f
 	WHERE DATEPART(YEAR, DATEADD(SECOND, f.StartDate, '1970-01-01')) = 2024
 )
---SELECT * FROM RankedGoals
 
 -- since we want the first goal of 2024, we only consider rank 1
 -- Then pick the top 3
 SELECT TOP 3 COUNT(Goal) as Occurence, Goal FROM RankedGoals
 WHERE ranknum=1
-GROUP BY Goal;
+GROUP BY Goal
+ORDER BY Occurence DESC;
