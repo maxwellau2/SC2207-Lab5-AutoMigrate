@@ -1,10 +1,10 @@
 from util import create_table
 import os
 
-files = os.listdir("sql")
+files = os.listdir("tables")
 files.sort()
 for i, obj in enumerate(files):
-    files[i] = "sql/" + obj
+    files[i] = "tables/" + obj
 # print(files)
 # files = [
 #     'sql/01-investor.sql',
