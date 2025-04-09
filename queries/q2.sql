@@ -34,8 +34,8 @@
 
 -- SELECT * from investorportfolio2024
 -- WHERE pnl2024 > 10;
-SELECT pv.InvestorID, i.name, CalcAnnualizedReturn
-FROM dbo.vPortfolioWithCalc pv
+SELECT pv.InvestorID, i.name, AnnualizedReturn
+FROM vPortfolioWithCalc pv
 JOIN Investor i
 ON pv.InvestorID = i.InvestorID
-WHERE pv.CalcAnnualizedReturn > 10.0;
+WHERE pv.AnnualizedReturn > 10.0;

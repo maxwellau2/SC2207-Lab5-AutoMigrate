@@ -5,8 +5,8 @@ WITH Profits2024 AS (
         i.Gender,
         -- approximate 2024 profit = MarketValue * (AnnualizedReturn / 100)
         p.MarketValue * p.AnnualizedReturn / 100.0 AS Profit
-    FROM dbo.Investor i
-    JOIN dbo.Portfolio p
+    FROM Investor i
+    JOIN vPortfolioWithCalc p
       ON i.InvestorID = p.InvestorID
     WHERE 
       -- age as of Jan 1 2024 between 20 and 29
