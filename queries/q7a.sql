@@ -8,7 +8,7 @@ Profits2024 AS (
         i.Gender,
         p.MarketValue * p.AnnualizedReturn / 100.0 AS Profit
     FROM dbo.Investor i
-    JOIN dbo.Portfolio p
+    JOIN dbo.vPortfolioWithCalc p
       ON i.InvestorID = p.InvestorID
     WHERE 
       DATEDIFF(

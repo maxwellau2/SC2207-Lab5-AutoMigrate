@@ -1,4 +1,4 @@
-CREATE OR ALTER VIEW dbo.vPortfolioWithCalc AS
+CREATE OR ALTER VIEW vPortfolioWithCalc AS
 SELECT
   p.InvestorID,
   p.PID,
@@ -10,9 +10,9 @@ SELECT
   -- mean(performance) * 12 (performance is month on month)
   -- in reality, we would use the ACTUAL formula which needs states
   -- quite hard to do in SQL...
-  AVG(pp.UnrealizedGainLoss)*12.0 AS CalcAnnualizedReturn
-FROM dbo.Portfolio p
-JOIN dbo.PortfolioPerformance pp
+  AVG(pp.UnrealizedGainLoss)*12.0 AS AnnualizedReturn
+FROM Portfolio p
+JOIN PortfolioPerformance pp
   ON p.PID = pp.PID
   AND DATEPART(
         YEAR,
