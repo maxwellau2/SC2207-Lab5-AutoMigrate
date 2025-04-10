@@ -1,5 +1,3 @@
-# disclaimer, i just took this from chat
-
 import sys
 import pyodbc
 from util import get_connection
