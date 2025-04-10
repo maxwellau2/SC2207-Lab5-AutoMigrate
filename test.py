@@ -1,10 +1,5 @@
 import pyodbc
-
-# Replace these with your actual values
-server   = '10.96.189.36'      # e.g. 'localhost\\SQLEXPRESS' or 'my.db.server.com,1433'
-database = 'SCS2g1'
-username = 'SCS2g1'
-password = 'P@ssw0rd!'
+from config import server, database, username, password
 
 # Build the connection string
 conn_str = (

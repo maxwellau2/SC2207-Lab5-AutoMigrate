@@ -40,7 +40,7 @@ def drop_all_tables():
     print("Dropping all user tables…")
     cursor.execute(drop_sql)
 
-    print("All user tables (and their FKs) have been dropped.")
+    print("All user tables (and their FKs) have been dropped. ✅")
     cursor.close()
     conn.close()
 
