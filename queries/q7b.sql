@@ -1,3 +1,6 @@
+-- Q7. Are male investors in their 20s making more money from their investments than their female counterparts in 2024? (Per Portfolio Basis)
+
+
 -- Compare total 2024 profits for male vs. female investors aged
 -- per portfolio
 WITH PortfolioPerformance2024 AS (

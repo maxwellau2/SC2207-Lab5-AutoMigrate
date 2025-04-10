@@ -1,3 +1,5 @@
+-- Q7. Are male investors in their 20s making more money from their investments than their female counterparts in 2024? (Per Person Basis)
+
 WITH InvestorPerformance2024 AS (
     -- Get performance data for 2024 only
     SELECT 

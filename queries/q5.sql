@@ -1,3 +1,5 @@
+-- Q5. Find investors who consistently top up their investment at the beginning of every month (dollar-cost averaging) in 2024 for at least one of their portfolios.
+
 WITH TopUps2024 AS (
     SELECT
         InvestorID,
