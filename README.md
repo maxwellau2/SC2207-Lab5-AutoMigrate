@@ -21,6 +21,14 @@ pip install -r requirements.txt
 
 4. Run tips
 
+-   To test connection
+
+```
+python test.py # without make
+
+make test # with make
+```
+
 -   To remove all tables
 
 ```
