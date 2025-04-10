@@ -21,7 +21,7 @@ def drop_all_tables():
 
     EXEC sp_executesql @sql;
     """
-    print("⏳ Dropping all foreign-key constraints…")
+    print("Dropping all foreign-key constraints…")
     cursor.execute(fk_sql)
 
     # 2) Drop every user table

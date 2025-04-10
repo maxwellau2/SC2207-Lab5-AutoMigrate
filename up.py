@@ -23,5 +23,5 @@ for i, obj in enumerate(files):
 # ]
 
 for file in files:
-    print(file)
+    # print(file)
     create_table(file)

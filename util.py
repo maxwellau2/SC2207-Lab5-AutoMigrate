@@ -23,12 +23,12 @@ def get_connection() -> pyodbc.Connection:
 def create_table(sql_path: str) ->None:
     conn = get_connection()
     with open(sql_path, 'r', encoding='utf-8') as f:
-        print(f"Running {sql_path}")
+        # print(f"Running {sql_path}")
         sql = f.read()
         # Create a cursor and run a simple query
         cursor = conn.cursor()
         cursor.execute(sql)
-        print(f"Created Table {sql_path}")
+        print(f"Successfully Created Table {sql_path} ✅")
         # Always close when done
         cursor.close()
     conn.close()
@@ -36,12 +36,12 @@ def create_table(sql_path: str) ->None:
 def seed(sql_path: str) ->None:
     conn = get_connection()
     with open(sql_path, 'r', encoding='utf-8') as f:
-        print(f"Running {sql_path}")
+        # print(f"Running {sql_path}")
         sql = f.read()
         # Create a cursor and run a simple query
         cursor = conn.cursor()
         cursor.execute(sql)
-        print(f"seeded {sql_path}")
+        print(f"Successfully Seeded {sql_path} ✅")
         # Always close when done
         cursor.close()
     conn.close()

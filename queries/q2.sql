@@ -38,4 +38,5 @@ SELECT pv.InvestorID, i.name, AnnualizedReturn
 FROM vPortfolioWithCalc pv
 JOIN Investor i
 ON pv.InvestorID = i.InvestorID
-WHERE pv.AnnualizedReturn > 10.0;
+WHERE pv.AnnualizedReturn > 10.0
+ORDER BY InvestorID ASC;

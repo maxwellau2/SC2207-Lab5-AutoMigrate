@@ -14,13 +14,13 @@
 -- HAVING AVG(p.AnnualizedReturn) < 0;
 
 
-with investorportfolio2024 as
-(select investor.investorid, name, portfolio.pid, sum(portfolioperformance.unrealizedgainloss) as pnl2024
-from investor
-join portfolio
-on investor.investorid=portfolio.investorid
-join portfolioperformance
-on portfolio.pid=portfolioperformance.pid	
+WITH investorportfolio2024 AS
+(SELECT investor.investorid, name, portfolio.pid, sum(portfolioperformance.unrealizedgainloss) as pnl2024
+FROM investor
+JOIN portfolio
+ON investor.investorid=portfolio.investorid
+JOIN portfolioperformance
+ON portfolio.pid=portfolioperformance.pid	
 -- Method A: extract the year after converting to DATETIME
 WHERE DATEPART(
         YEAR,
@@ -31,8 +31,9 @@ WHERE DATEPART(
         YEAR,
         DATEADD(SECOND, portfolio.inceptiondate, '1970-01-01')
       ) < 2025
-group by investor.investorid, portfolio.pid, investor.name
+GROUP BY investor.investorid, portfolio.pid, investor.name
 )
 
-SELECT * from investorportfolio2024
-WHERE pnl2024 < 0;
+SELECT * FROM investorportfolio2024
+WHERE pnl2024 < 0
+ORDER BY InvestorID ASC;
