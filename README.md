@@ -30,7 +30,7 @@ python test.py
 -   To test connection with make
 
 ```bash
-make test # with make
+make test
 ```
 
 -   To remove all tables
