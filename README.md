@@ -6,13 +6,13 @@
 
 2. create the environment
 
-```
+```bash
 python3 -m venv venv
 ```
 
 3. install requirments
 
-```
+```bash
 source venv/bin/activate # for linux/mac users
 venv/scripts/activate # for windows users
 
@@ -21,46 +21,50 @@ pip install -r requirements.txt
 
 4. Run tips
 
--   To test connection
+-   To test connection with python
 
+```bash
+python test.py
 ```
-python test.py # without make
 
+-   To test connection with make
+
+```bash
 make test # with make
 ```
 
 -   To remove all tables
 
-```
+```bash
 python down.py
 ```
 
 -   To create all tables
 
-```
+```bash
 python up.py
 ```
 
 -   To seed the tables
 
-```
+```bash
 python seed.py
 ```
 
 -   To run the sequence (down,up,seed), ensure you have MAKE
 
-```
+```bash
 sudo apt install make
 ```
 
 -   Then you can run the macro that does (down,up,seed) for you
 
-```
+```bash
 make run-all
 ```
 
 -   To run queries (it will run all the queries in the queries folder in ascending order)
 
-```
+```bash
 python query.py
 ```
