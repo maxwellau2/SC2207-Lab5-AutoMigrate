@@ -1,5 +1,7 @@
 from util import query
 from pprint import pprint
+from decimal import Decimal
+import pandas as pd
 
 print("Q1. Find investors who are making on average a loss across all their portfolios in 2024.")
 res = query("queries/q1.sql")
@@ -11,7 +13,9 @@ pprint(res)
 print("\n")
 print("Q3. Find the monthly average unrealized gain/loss of portfolios for each month in 2024.")
 res = query("queries/q3.sql")
-pprint(res)
+res = [list(r) for r in res]
+df = pd.DataFrame(data = res, columns = ["Month","Average_Unrealised_Gain_or_Loss",])
+print(df)
 print("\n")
 print("Q4. What is the top three most popular first financial goals for investors in 2024?")
 res = query("queries/q4.sql")
