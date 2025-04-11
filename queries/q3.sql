@@ -1,3 +1,5 @@
+-- Q3. Find the monthly average unrealized gain/loss of portfolios for each month in 2024.
+
 SELECT
     FORMAT(DATEADD(SECOND, PerformanceDate, '1970-01-01'), 'yyyy-MM') AS [YearMonth],
     AVG(UnrealizedGainLoss)                                AS AvgUnrealizedGainLoss

@@ -1,9 +1,12 @@
 /venv
 __pycache__/
 */__pycache__/
+/extras
+config.py
 
 # VSCode settings
 .vscode/
 
 # PyCharm / IntelliJ
 .idea/
+

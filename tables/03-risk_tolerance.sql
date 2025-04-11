@@ -8,6 +8,8 @@ BEGIN
         Q3answer NVARCHAR(50) NOT NULL,
         Q4answer NVARCHAR(50) NOT NULL,
         Q5answer NVARCHAR(50) NOT NULL,
-        CONSTRAINT FK_RiskTolerance_Investor FOREIGN KEY (InvestorID) REFERENCES Investor(InvestorID)
+        CONSTRAINT FK_RiskTolerance_Investor FOREIGN KEY (InvestorID) REFERENCES Investor(InvestorID),
+        -- Constraint to only these enum values
+        CONSTRAINT RiskLevelCheck CHECK (RiskLevel IN ('Conservative', 'Moderate', 'Aggressive') )
     );
 END

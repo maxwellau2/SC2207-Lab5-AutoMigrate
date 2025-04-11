@@ -8,8 +8,8 @@ BEGIN
         PostTradeCO      NVARCHAR(50) NOT NULL,
 
         CONSTRAINT PK_Bond_In_Portfolio PRIMARY KEY (PID, AssetID),
-        -- CONSTRAINT FK_BondInPortfolio_Portfolio
-            -- FOREIGN KEY (PID) REFERENCES Portfolio(PID),
+        CONSTRAINT FK_BondInPortfolio_Portfolio
+            FOREIGN KEY (PID) REFERENCES Portfolio(PID),
         CONSTRAINT FK_BondInPortfolio_Bond
             FOREIGN KEY (AssetID)
             REFERENCES Bond(AssetID)

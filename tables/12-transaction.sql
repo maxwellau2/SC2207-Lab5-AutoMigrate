@@ -8,11 +8,11 @@ BEGIN
         TransactionDate BIGINT NOT NULL CHECK (TransactionDate >= 0), -- store as epoch seconds like other tables
         Amount DECIMAL(12,2) NOT NULL,
         CONSTRAINT PK_Transaction PRIMARY KEY (TransactionID, PID),
+        CONSTRAINT FK_Transaction_Portfolio
+            FOREIGN KEY (PID) 
+            REFERENCES Portfolio(PID),
         CONSTRAINT FK_Transaction_Investor
             FOREIGN KEY (InvestorID) 
-            REFERENCES Investor(InvestorID),
-        CONSTRAINT FK_Transaction_Portfolio
-            FOREIGN KEY (InvestorID, PID) 
-            REFERENCES Portfolio(InvestorID, PID)
+            REFERENCES Investor(InvestorID)
     );
 END
