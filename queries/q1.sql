@@ -1,7 +1,7 @@
 -- Q1. Find investors who are making on average a loss across all their portfolios in 2024.
 
 WITH investorportfolio2024 AS
-(SELECT investor.investorid, name, portfolio.pid, sum(portfolioperformance.unrealizedgainloss) as pnl2024
+(SELECT investor.investorid, name, sum(portfolioperformance.unrealizedgainloss) as pnl2024
 FROM investor
 JOIN portfolio
 ON investor.investorid=portfolio.investorid
@@ -17,7 +17,7 @@ WHERE DATEPART(
         YEAR,
         DATEADD(SECOND, portfolio.inceptiondate, '1970-01-01')
       ) < 2025
-GROUP BY investor.investorid, portfolio.pid, investor.name
+GROUP BY investor.investorid, investor.name
 )
 
 SELECT * FROM investorportfolio2024
