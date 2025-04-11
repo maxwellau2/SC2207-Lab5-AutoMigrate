@@ -1,4 +1,4 @@
--- seeds/01-investor.sql
+-- seeds/01-investor.sql 
 SET IDENTITY_INSERT dbo.Investor ON;
 
 INSERT INTO dbo.Investor
